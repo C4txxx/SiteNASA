@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NASA APOD - Sua data de nascimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="card">
+        <div class="header">
+          <div class="title-group">
+            <h1>
+              NASA APOD
+              <span class="pill">Data de nascimento</span>
+            </h1>
+            <p>
+              Descubra qual era a imagem astronômica do dia publicada pela NASA
+              na data em que você nasceu.
+            </p>
+          </div>
+          <div class="nasa-badge">
+            <div class="nasa-dot"></div>
+            <span>Powered by NASA APOD</span>
+          </div>
+        </div>
+
+        <form id="apod-form">
+          <div class="field">
+            <label for="birthdate">Data de nascimento</label>
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              required
+              max=""
+            />
+          </div>
+          <button type="submit">
+            <span class="icon">✨</span>
+            Ver imagem
+          </button>
+        </form>
+
+        <div id="status" class="status">
+          Digite sua data de nascimento e clique em <strong>Ver imagem</strong>.
+        </div>
+
+        <div class="result">
+          <div class="image-wrapper">
+            <img id="apod-image" src="" alt="" style="display: none" />
+            <div id="placeholder" class="image-placeholder">
+              <div class="orbit">
+                <div class="dot"></div>
+              </div>
+              <div>Imagem do dia aparecerá aqui.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-header">
+              <div class="meta-title" id="apod-title">
+                Nenhuma imagem carregada ainda
+              </div>
+              <div class="meta-date" id="apod-date"></div>
+            </div>
+            <div class="meta-explanation" id="apod-explanation">
+              Assim que você buscar, vamos mostrar o título, a descrição e o link
+              em alta resolução (quando disponível).
+            </div>
+            <div class="meta-actions">
+              <span class="badge-soft">Astronomy Picture of the Day</span>
+              <a
+                id="hd-link"
+                class="link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="display: none"
+              >
+                Ver em alta resolução ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
